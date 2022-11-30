@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        const searchValue = ()=>{
+
+            const input  = document.getElementById('input');
+           console.log(input.value)
+            let data  = [10, 29, 42,52,56,23,67,21];
+            let value = 42;
+            let index;
+            console.log(data)
+            // i have to replace second position array with 29 using splice method how should i do that 
+            data.splice(2, 1, 29)
+            console.log(data)
+            for (let i = 0; i < data.length; i++) {
+                if(data[i]=== parseInt(input.value) ){
+                    index = i
+            break;
+        }
+           else{
+            
+           }
+           
+           
+        }
+        if(index){
+
+            console.log('item founed at ', index)
+        }
+        if(!index){
+            console.log('no data found')
+        }
+    }
+        </script>
+</head>
+<body>
+    <input id="input" type="number" placeholder="Enter the number to find ">
+    <button onclick="searchValue()">Find element </button>
+</body>
+</html>
