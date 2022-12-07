@@ -9,36 +9,51 @@
     <script>
         //creating a sorted merged array 
 
-        const arr1 = [2, 5,7,8,9,12,23,64, 77, 98, ];
-        let a1 = 0;
-        let a2 = 0;
-        let a3 = 0;
-        const arr2 = [2, 5, 6,23, 64, 68];
+        const arr1 = [1, 4, 5, 6,7,23,24, 34, 45, 65, 76,78];
+        const arr2 = [22, 25, 35, 53, 64,65];
         const arr3 = [];
-        
+        let a1 = 0;
+        let a2= 0;
+        let a3 = 0;
         while(a1<arr1.length && a2<arr2.length){
             if(arr1[a1]<arr2[a2]){
-                arr3[a3] = arr1[a1];
+                arr3[a3] = arr1[a1]
                 a1++;
+                
             }else{
-                arr3[a3] = arr2[a2];
+                arr3[a3] = arr2[a2]
                 a2++;
+                
             }
-
-            a3++
+            a3++;
+        }
+        
+        while(a1<arr1.length){
+            arr3[a3] = arr1[a1]
+            a3++;
+            a1++;
         }
 
-        console.log(a1, a2, a3)
-
-      while(a1<arr1.length){
-        arr3[a3] = arr1[a1]
-        a1++
-        a3++
-      }
-       
-
         console.log(arr3)
-    </script>
+        console.log(arr2)
+        console.log(arr1)
+
+//time complexity : the instructions taken by the program to run the program 
+//space complexity: the memory consumed by the program 
+
+//we can easily count the space complexity of the program : 39 variables used here array elements are included 
+//but time complexity varies in different manner in which which system you are using how much threads you have how much RAM you have , how much time you are using the memory etc. 
+
+
+
+// Algorithm complexity 
+// Algorithm means the steps to do  something 
+
+
+//while using the algorithm we check the two things 
+//time complexity 
+//space complexity
+         </script>
 </head>
 <body>
     <h2>THis is file</h2>
