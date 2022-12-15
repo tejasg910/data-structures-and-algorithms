@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const data = [];
+        let size = data.length;
+        function push(value){
+            if(size>7){
+                alert('sorry you can not add the data'+value)
+            }
+            else{
+                data[size] = value;
+                size++
+            //add the data at the last every time 
+            }
+        }
+        push(32)
+        push(2)
+        push(22)
+        push(22)
+        push(22)
+        push(22)
+        push(22)
+        push(34)
+       
+
+
+       console.log(data)
+
+
+        function pop(){
+            if(size>0){
+                size = size -1;
+                data.length = size;
+                //delete the array element from the last every time 
+            }else{
+                alert('bhai tera array empty hai ')
+            }
+        }
+
+        // pop()
+        // pop()
+        // pop()
+       
+//so this is called last come first out and first come last out 
+
+        // console.log(data)
+    </script>
+</head>
+<body>
+    <h1>Callstack</h1>
+</body>
+</html>

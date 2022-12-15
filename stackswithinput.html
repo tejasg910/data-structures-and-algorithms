@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const data = [];
+        let size = data.length;
+        function push() {
+            const value = document.getElementById('newel').value
+            console.log(size)
+            if (size > 7) {
+                alert('sorry you can not add the data' + value)
+            }
+            else {
+                data[size] = value;
+                size += 1
+                document.getElementById('newel').value = ''
+                //add the data at the last every time 
+            }
+        }
+
+
+
+
+
+        function pop() {
+            if (size > 0) {
+                size = size - 1;
+                data.length = size;
+                //delete the array element from the last every time 
+            } else {
+                alert('bhai tera array empty hai ')
+            }
+        }
+
+        function display() {
+            const elements = document.getElementById("elements");
+            elements.innerHTML = ""
+            data.forEach(element => {
+
+                elements.innerHTML += element + " "
+            });
+        }
+
+//so this is called last come first out and first come last out 
+
+        // console.log(data)
+    </script>
+</head>
+
+<body>
+    <h1>Stack in javascript</h1>
+    <p id="elements"></p>
+    <input type="text" id="newel" placeholder="Enter the stack element">
+    <button onclick="push()">Add element in stack</button>
+    <button onclick="pop()">Remove element in stack</button>
+    <button onclick="display()">Display all elements in stack</button>
+
+
+</body>
+
+</html>

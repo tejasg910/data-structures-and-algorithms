@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let data = [];
+    let curSize = data.length;
+    let removedItem;
+
+    function push(item) {
+        data[curSize] = item;
+        curSize += 1;
+
+    }
+    function pop() {
+        removedItem = data[curSize - 1];
+        curSize -= 1;
+        data.length = curSize;
+
+        return removedItem;
+    }
+    function reverseStr(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            push(arr[i])
+        }
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = pop()
+
+        }
+
+    }
+
+    let str = "this is string and we are performing the reverse string function ";
+    str = str.split("")
+
+    reverseStr(str)
+
+    str = str.join("")
+    console.log(str)
+</script>
+
+<body>
+
+</body>
+
+</html>

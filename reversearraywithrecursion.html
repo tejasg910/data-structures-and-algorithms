@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let data = [32, 23, 523, 52, 42, 32, 53, 64, 64, 75];
+    let temp;
+    console.log(data)
+    function customReverse(data, i, length) {
+        if (i <= length) {
+            console.log(length)
+            temp = data[i];
+            data[i] = data[length];
+            data[length] = temp;
+            console.log(data)
+            customReverse(data, i + 1, length - 1)
+        }
+
+    }
+    // customReverse(data, 0, data.length - 1)
+    // console.log(data)
+    // const reverse = data.reverse()
+    const slicearray = data.slice().reverse();
+    // console.log(reverse)
+    console.log(data)
+</script>
+
+<body>
+
+</body>
+
+</html>
