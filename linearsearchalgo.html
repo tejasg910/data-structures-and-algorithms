@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear search algorithm</title>
+    <script>
+
+
+
+        function search() {
+            const input = document.getElementById("input").value;
+            let arr = [32, 3, 2, 54, 23, 65, 76, 4, 3, 23, 65];
+            let position;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == input) {
+                    position = i;
+                    alert("Element found at " + position)
+                    break;
+                }
+
+            }
+            if (position === undefined) {
+                alert("No element found ")
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <h1>We are learning the LINEAR SEARCH ALGORITHM</h1>
+
+    <input type="number" id="input" placeholder="Enter the value">
+    <button onclick="search()"> Search</button>
+
+</body>
+
+</html>

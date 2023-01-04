@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stackreverse</title>
+    <script>
+        class Data {
+            arr;
+            maxSize;
+            curSize;
+            temp;
+            constructor(size) {
+                this.arr = []
+                this.maxSize = size;
+                this.curSize = this.arr.length;
+
+            }
+            push(v) {
+                if (this.curSize < this.maxSize) {
+                    this.arr[this.curSize] = v;
+                    this.curSize++;
+
+                }
+                else {
+                    console.log("stack is full")
+                }
+            }
+            reverse() {
+                for (let i = 0; i < this.curSize; i++) {
+                    this.temp = this.arr[i];
+                    this.arr[i] = this.arr[this.curSize - 1];
+                    this.arr[this.curSize - 1] = this.temp;
+                    this.curSize--;
+                }
+            }
+            display() {
+                console.log(this.arr)
+            }
+
+
+        }
+        const a = new Data(5);
+        a.push(3);
+        a.push(6);
+        a.push(2);
+        a.push(8);
+        a.push(1);
+        a.display()
+        a.reverse();
+        a.display()
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

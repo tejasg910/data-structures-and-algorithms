@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Stack {
+            item = [];
+            currentSize;
+            maxSize;
+            constructor(size) {
+                console.log("size is called")
+                this.maxSize = size;
+                this.currentSize = this.item.length;
+            }
+            push(value) {
+
+                if (this.currentSize < this.maxSize) {
+
+                    this.item[this.currentSize] = value;
+                    this.currentSize++;
+
+                } else {
+                    console.log("stack is full")
+                }
+
+            }
+            pop() {
+                if (this.currentSize > 0) {
+                    this.currentSize--;
+                    this.item.length = this.currentSize;
+                } else {
+                    console.log("stack is empty")
+                }
+            }
+            display() {
+                console.log("the array is", this.item)
+            }
+        }
+
+        const st1 = new Stack(5)
+        st1.push(32);
+        st1.push(77);
+        st1.push(45);
+
+        st1.pop()
+        st1.pop()
+
+
+
+        st1.display()
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
