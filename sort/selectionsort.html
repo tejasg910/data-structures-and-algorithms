@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let arr = [534, 2, 5, 23, 523, 5, 23, 6, 65, 78];
+
+
+        function selectionSort(arr) {
+
+            for (let i = 0; i < arr.length; i++) {
+                let midId = i;
+
+                for (let j = i + 1; j < arr.length; j++) {
+
+                    if (arr[midId] > arr[j]) {
+                        midId = j;
+                    }
+
+                }
+
+                let temp = arr[midId];
+                arr[midId] = arr[i];
+                arr[i] = temp;
+
+
+            }
+
+        }
+
+        function selectionSortReverse(arr) {
+
+            for (let i = 0; i < arr.length; i++) {
+                let midId = i;
+
+                for (let j = i + 1; j < arr.length; j++) {
+
+                    if (arr[midId] < arr[j]) {
+                        midId = j;
+                    }
+
+                }
+
+                let temp = arr[midId];
+                arr[midId] = arr[i];
+                arr[i] = temp;
+
+
+            }
+
+        }
+
+
+        selectionSort(arr)
+        selectionSortReverse(arr)
+        console.log(arr)
+
+
+    </script>
+
+</head>
+
+<body>
+    <h2>Selection sort algorithm</h2>
+</body>
+
+</html>
