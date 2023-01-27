@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-       
-       function normal(){
-        const data =32802;
-console.log(data)
-       }
-       function veg(){
-normal();
+
+        function normal() {
+            const data = 32802;
+            // console.log(data)
         }
-        function fruit(){
-veg();        }
-        function topFun(){
+        function veg() {
+            normal();
+        }
+        function fruit() {
+            veg();
+        }
+        function topFun() {
             fruit();
-        }   
+        }
         topFun();
 
 
@@ -31,30 +33,32 @@ veg();        }
 
         //now you have a assessment you need to explain the code that i have written below 
 
-        function call(x){
+        function call(x) {
             console.log(x) //head recursion 
 
-            
+
             //head recursion calls immediately after the function call 
 
-            if(x>0){
-                call(x-1) 
+            if (x > 0) {
+                call(x - 1)
             }
 
             console.log(x)  //tail recursion 
-         
-            //but tail recursion calls at the time of ending of all functions 
-         
 
-            
+            //but tail recursion calls at the time of ending of all functions 
+
+
+
         }
 
-       const res =  call(5)
-       console.log(res)
+        const res = call(5)
+        console.log(res)
 
     </script>
 </head>
+
 <body>
     <h2>Head and tail recursion methods </h2>
 </body>
+
 </html>
