@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que </title>
+
+    <script>
+
+        const que = [];
+        let curSize = que.length;
+        const maxSize = 5;
+
+        function enque(value) {
+            que[curSize] = value;
+            curSize++;
+
+        }
+
+        enque(10)
+        enque(7)
+        enque(2)
+        enque(32)
+
+
+        function deque() {
+            for (let i = 0; i < que.length; i++) {
+                que[i] = que[i + 1];
+
+            }
+            curSize--;
+            que.length = curSize;
+        }
+        console.log(que)
+        deque()
+        console.log(que)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
